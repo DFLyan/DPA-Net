@@ -1,7 +1,7 @@
 import tensorflow as tf
 import tensorlayer as tl
 
-import scipy
+import scipy, random
 import numpy as np
 from functools import reduce
 
@@ -36,10 +36,20 @@ def inv_norm(x):
     x = x * (255. / 2.)
     return x
 
+def inv_norm_0(x):
+    x = x - min(x)
+    x = x / max(x)
+    x = x*255
+    return x
 
 def augm(x):
+    size = x.shape
     x = tl.prepro.flip_axis(x, axis=0, is_random=True)
     x = tl.prepro.flip_axis(x, axis=1, is_random=True)
+    x = np.reshape(x, (size[0], size[1], 1))
+    rg = random.sample([0, 90, 180, 270], 1)
+    rg = rg[0]
+    x = tl.prepro.rotation(x, rg=rg, is_random=False)
     return x
 
 
