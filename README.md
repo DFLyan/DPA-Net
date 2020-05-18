@@ -19,5 +19,8 @@ $ python DPA-Net.py
 ```
 $ puthon eval_DPA.py
 ```
-
+## Others
+### First:
 You can change the setting in config.py, such as MR(measurement ratio) and so on. The files of trained model parameter and train data will be uploaded soon.
+### Two:
+Maybe, some warnings or errors will arise when you run the code because of my careless. If you can not cover it, just give me feedback. I will solve it as soon as possible.
