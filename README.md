@@ -3,7 +3,7 @@
 You can use crop.m to generate training data.
 
 ## Use trained model
-You can download the trained model from [Google Drive](https://drive.google.com/open?id=1-fvKrbUg7Q0wWhiwpUpXbsBf4SQl50c3). The put them in the file folder--checkpoint.
+You can download the trained model from [Google Drive](https://drive.google.com/open?id=1-fvKrbUg7Q0wWhiwpUpXbsBf4SQl50c3). Then put them in the file folder--checkpoint.
 
 ## Dependencise
 * Python 3.6
