@@ -5,7 +5,7 @@ import os, time, logging
 import tensorflow as tf
 import tensorlayer as tl
 import math as ma
-from model_DPA_optim import *
+from model_DPA import *
 from utils import *
 from config import config
 from skimage.measure import compare_psnr, compare_ssim
