@@ -35,7 +35,10 @@ num_block = int(fullimgsize / block_size)
 
 
 def read_all_imgs(img_list, path='', n_threads=32):
-    """ Returns all images in array by given path and name of each image file. """
+    """ Returns all images in array by given path and name of each image file. 
+        Warning: This function is used for gray images. 
+                 If you want to train the network with RGB images, please see the line 11 of utils.py.
+                 And other functions, such as augmentation, may be changed at the same time."""
     imgs = []
     for idx in range(0, len(img_list), n_threads):
         b_imgs_list = img_list[idx : idx + n_threads]
