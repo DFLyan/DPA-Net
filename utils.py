@@ -6,7 +6,8 @@ import numpy as np
 from functools import reduce
 
 def get_gray_imgs_fn(file_name, path):
-    """ Input an image path and name, return an image array """
+    """ Input an image path and name, return an image array; 
+        if RGB images, then mode = 'RGB'."""
     # return scipy.misc.imread(path + file_name).astype(np.float)
     return scipy.misc.imread(path + file_name, mode='L')
 
