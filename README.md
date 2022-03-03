@@ -37,3 +37,15 @@ $ puthon eval_DPA.py
 You can change the setting in config.py, such as MR(measurement ratio) and so on. The files of trained model parameter and train data will be uploaded soon.
 ### Second:
 Maybe, some warnings or errors will arise when you run the code because of my careless. If you can not cover it, just give me feedback. I will solve it as soon as possible.
+
+# New
+## If you want to simplify the generation of y from the image, you can modify the code:
+### Firstly, reshape the measurement matrix:
+```
+phi = np.reshape(A, (block_size, block_size, 1, size_y))
+```
+### Secondly, use the function "tf.nn.conv2d" to realize the samling(measurement), for example:
+```
+y_meas = tf.nn.conv2d(t_target_image, A, (1, block_size, block_size, 1), padding='SAME')
+```
+### This can be modified in "train.py" and "model.py" where use the "for" to generate the y. It is time-consuming to use the "for". So if you use the new code, it will be faster. Because it will be processed in GPU instead of CPU.
