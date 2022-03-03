@@ -1,4 +1,15 @@
-# DPA-Net
+# DPA-Net:Dual-path attention network for compressed sensing image reconstruction
+```
+@article{sun2020dual,
+  title={Dual-path attention network for compressed sensing image reconstruction},
+  author={Sun, Yubao and Chen, Jiwei and Liu, Qingshan and Liu, Bo and Guo, Guodong},
+  journal={IEEE Transactions on Image Processing},
+  volume={29},
+  pages={9482--9495},
+  year={2020},
+  publisher={IEEE}
+}
+```
 ## Dataset
 You can use crop.m to generate training data.
 
